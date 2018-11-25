@@ -1,55 +1,17 @@
-2018-11-21 15:40:10 ERROR (MainThread) [homeassistant.core] Error doing job: Exception in callback SendfileStreamWriter._sendfile_cb(<Future cancelled>, 11, 10, 27512, 44802, <_UnixSelecto...e debug=False>, True)
+2018-11-25 16:01:03 ERROR (Thread-2) [homeassistant.util.yaml] YAML file /home/pi/.homeassistant/configuration.yaml contains duplicate key "group". Check lines 79 and 85.
+2018-11-25 16:01:03 ERROR (Thread-2) [homeassistant.util.yaml] YAML file /home/pi/.homeassistant/configuration.yaml contains duplicate key "homeassistant". Check lines 0 and 102.
+2018-11-25 16:01:03 ERROR (Thread-2) [homeassistant.util.yaml] YAML file /home/pi/.homeassistant/configuration.yaml contains duplicate key "sensor". Check lines 55 and 108.
+2018-11-25 16:01:03 ERROR (Thread-2) [homeassistant.util.yaml] YAML file /home/pi/.homeassistant/configuration.yaml contains duplicate key "script". Check lines 81 and 163.
+2018-11-25 16:01:03 ERROR (Thread-2) [homeassistant.util.yaml] YAML file /home/pi/.homeassistant/configuration.yaml contains duplicate key "automation". Check lines 80 and 194.
+2018-11-25 16:01:05 WARNING (MainThread) [homeassistant.config] Incomplete core configuration. Auto detected latitude: None, longitude: None, name: None, time_zone: None
+2018-11-25 16:01:13 ERROR (MainThread) [homeassistant.setup] Error during setup of component sun
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.5/asyncio/events.py", line 127, in _run
-    self._callback(*self._args)
-  File "/home/pi/homeassistant/lib/python3.5/site-packages/aiohttp/web_fileresponse.py", line 37, in _sendfile_cb
-    loop.remove_writer(out_fd)
-  File "/usr/local/lib/python3.5/asyncio/selector_events.py", line 351, in remove_writer
-    self._ensure_fd_no_transport(fd)
-  File "/usr/local/lib/python3.5/asyncio/selector_events.py", line 258, in _ensure_fd_no_transport
-    fd, transport))
-RuntimeError: File descriptor 11 is used by transport <_SelectorSocketTransport fd=11 read=polling write=<polling, bufsize=0>>
-2018-11-21 15:40:10 ERROR (MainThread) [homeassistant.core] Error doing job: Exception in callback SendfileStreamWriter._sendfile_cb(<Future cancelled>, 11, 10, 27512, 44802, <_UnixSelecto...e debug=False>, True)
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.5/asyncio/events.py", line 127, in _run
-    self._callback(*self._args)
-  File "/home/pi/homeassistant/lib/python3.5/site-packages/aiohttp/web_fileresponse.py", line 37, in _sendfile_cb
-    loop.remove_writer(out_fd)
-  File "/usr/local/lib/python3.5/asyncio/selector_events.py", line 351, in remove_writer
-    self._ensure_fd_no_transport(fd)
-  File "/usr/local/lib/python3.5/asyncio/selector_events.py", line 258, in _ensure_fd_no_transport
-    fd, transport))
-RuntimeError: File descriptor 11 is used by transport <_SelectorSocketTransport fd=11 read=polling write=<polling, bufsize=0>>
-2018-11-21 15:40:27 ERROR (MainThread) [homeassistant.core] Error executing service <ServiceCall media_player.media_play_pause: entity_id=['media_player.spotify']>
-Traceback (most recent call last):
-  File "/home/pi/homeassistant/lib/python3.5/site-packages/spotipy/client.py", line 121, in _internal_call
-    r.raise_for_status()
-  File "/home/pi/homeassistant/lib/python3.5/site-packages/requests/models.py", line 935, in raise_for_status
-    raise HTTPError(http_error_msg, response=self)
-requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://api.spotify.com/v1/me/player/play
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/pi/homeassistant/lib/python3.5/site-packages/homeassistant/core.py", line 1002, in _event_to_service_call
-    await service_handler.func(service_call)
-  File "/home/pi/homeassistant/lib/python3.5/site-packages/homeassistant/components/media_player/__init__.py", line 403, in async_service_handler
-    yield from getattr(player, method['method'])(**params)
-  File "/usr/local/lib/python3.5/asyncio/futures.py", line 381, in __iter__
-    yield self  # This tells Task to wait for completion.
-  File "/usr/local/lib/python3.5/asyncio/tasks.py", line 310, in _wakeup
-    future.result()
-  File "/usr/local/lib/python3.5/asyncio/futures.py", line 294, in result
-    raise self._exception
-  File "/usr/local/lib/python3.5/concurrent/futures/thread.py", line 55, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/home/pi/homeassistant/lib/python3.5/site-packages/homeassistant/components/media_player/spotify.py", line 232, in media_play
-    self._player.start_playback()
-  File "/home/pi/homeassistant/lib/python3.5/site-packages/spotipy/client.py", line 913, in start_playback
-    return self._put(self._append_device_id("me/player/play", device_id), payload=data)
-  File "/home/pi/homeassistant/lib/python3.5/site-packages/spotipy/client.py", line 190, in _put
-    return self._internal_call('PUT', url, payload, kwargs)
-  File "/home/pi/homeassistant/lib/python3.5/site-packages/spotipy/client.py", line 126, in _internal_call
-    headers=r.headers)
-spotipy.client.SpotifyException: http status: 404, code:-1 - https://api.spotify.com/v1/me/player/play:
- Player command failed: No active device found
+  File "/home/pi/homeassistant/lib/python3.5/site-packages/homeassistant/setup.py", line 142, in _async_setup_component
+    result = await component.async_setup(hass, processed_config)
+  File "/usr/local/lib/python3.5/asyncio/coroutines.py", line 210, in coro
+    res = func(*args, **kw)
+  File "/home/pi/homeassistant/lib/python3.5/site-packages/homeassistant/components/sun.py", line 47, in async_setup
+    sun = Sun(hass, get_astral_location(hass))
+  File "/home/pi/homeassistant/lib/python3.5/site-packages/homeassistant/helpers/sun.py", line 19, in get_astral_location
+    timezone = hass.config.time_zone.zone
+AttributeError: 'NoneType' object has no attribute 'zone'

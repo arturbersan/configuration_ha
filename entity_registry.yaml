@@ -3,7 +3,7 @@ media_player.casal_tv:
   platform: cast
   unique_id: 464e6700-401f-dd89-d030-2e46bfd14fee
 media_player.meu_quarto_:
-  name:
+  name: GoogleCast
   platform: cast
   unique_id: 796fa72e-6dd7-85a1-214d-686a064c0c59
 light.mesa_de_trabalho_:
