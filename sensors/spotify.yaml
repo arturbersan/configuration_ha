@@ -1,0 +1,16 @@
+# Spotify sensors
+- platform: template
+  sensors:
+    spotify_volume:
+      friendly_name: "Spotify Volume"
+      value_template: "{{ states.media_player.spotify.attributes.volume_level }}"
+- platform: template
+  sensors:
+    spotify_shuffle:
+      friendly_name: "Spotify Shuffle"
+      value_template: "{{ states.media_player.spotify.attributes.shuffle }}"
+- platform: template
+  sensors:
+    spotify_source:
+      friendly_name: "Spotify Source"
+      value_template: "{{ states.media_player.spotify.attributes.source }}"

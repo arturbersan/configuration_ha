@@ -1,0 +1,9 @@
+home_spotify_controls:
+  name: Spotify Controls
+  control: hidden
+  entities:
+    - input_select.spotify_playlist
+    - input_select.spotify_source
+    - script.spotify_music
+    - input_number.spotify_volume
+    - input_boolean.spotify_shuffle
