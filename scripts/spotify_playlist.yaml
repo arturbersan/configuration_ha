@@ -2,27 +2,6 @@ spotify_music:
   alias: "Play selected spotify playlist"
   sequence:
     - service: media_player.select_source
-      data_template: 
-        entity_id: media_player.spotify
-        # O entity_id chamasse = media_player.meu_quarto, mas o nome
-        # amigável pode ser "GoogleCast" no input
-        source: >
-          {% if is_state("input_select.spotify_source", "GoogleCast") %} GoogleCast
-          {% elif is_state("input_select.spotify_source", "iPhone de Artur") %} iPhone de Artur
-          {% endif %}
+      data_template: !include ../data_template_script/spotify_source.yaml
     - service: media_player.play_media
-      data_template:
-        entity_id: media_player.spotify
-        media_content_type: playlist
-        media_content_id: >
-          {% if is_state("input_select.spotify_playlist", "Made In Germany") %} spotify:user:playlists.germany:playlist:5M7jfvXr6fiQ21U8jfe9aE
-          {% elif is_state("input_select.spotify_playlist", "Murmel") %} spotify:user:1143893613:playlist:5dfbLgeesT8gixq1GTWBoU
-          {% elif is_state("input_select.spotify_playlist", "Chillige Bässe") %} spotify:user:spotify:playlist:37i9dQZF1DX37cXruBmbRS
-          {% elif is_state("input_select.spotify_playlist", "Mixed Hip Hop") %} spotify:user:1143893613:playlist:4yuXhTpPFSTnRSYmAN8mse
-          {% elif is_state("input_select.spotify_playlist", "Mixed Electro") %} spotify:user:1143893613:playlist:1grR3x1MSPlyfS6VsaSzPn
-          {% elif is_state("input_select.spotify_playlist", "Mixed Rock") %} spotify:user:1143893613:playlist:2ECMyR5ovezJBGQDnL3w23
-          {% elif is_state("input_select.spotify_playlist", "Mixed Dub") %} spotify:user:1143893613:playlist:093q3iMD3lAA4h5oatDJPh
-          {% elif is_state("input_select.spotify_playlist", "Good Feeling") %} spotify:user:1143893613:playlist:0rHdZMqeSR4XVvPf6QmFM4
-          {% elif is_state("input_select.spotify_playlist", "Queen") %} spotify:user:maandymendi:playlist:7ipYKFt8I3D6qO3QK23otG
-          {% elif is_state("input_select.spotify_playlist", "Pra Amar") %} spotify:user:mendesiasmin_:playlist:6c4CefxKB86sPOdubDKwPK
-          {% endif %}
+      data_template: !include ../data_template_script/spotify_playlist.yaml

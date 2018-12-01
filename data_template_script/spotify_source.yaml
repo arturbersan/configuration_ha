@@ -1,0 +1,7 @@
+entity_id: media_player.spotify
+# O entity_id chamasse = media_player.meu_quarto, mas o nome
+# amigável pode ser "GoogleCast" no input
+source: >
+  {% if is_state("input_select.spotify_source", "GoogleCast") %} GoogleCast
+  {% elif is_state("input_select.spotify_source", "iPhone de Artur") %} iPhone de Artur
+  {% endif %}
