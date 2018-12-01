@@ -1,5 +1,5 @@
 home_spotify_controls:
-  name: Spotify Controls
+  name: Spotify Playlist
   control: hidden
   entities:
     - input_select.spotify_playlist

@@ -1,4 +1,4 @@
-spotify_music:
+complete_scenes:
   alias: "Play selected spotify playlist"
   sequence:
     - service: media_player.select_source
@@ -18,11 +18,15 @@ spotify_music:
           {% if is_state("input_select.spotify_playlist", "Made In Germany") %} spotify:user:playlists.germany:playlist:5M7jfvXr6fiQ21U8jfe9aE
           {% elif is_state("input_select.spotify_playlist", "Murmel") %} spotify:user:1143893613:playlist:5dfbLgeesT8gixq1GTWBoU
           {% elif is_state("input_select.spotify_playlist", "Chillige Bässe") %} spotify:user:spotify:playlist:37i9dQZF1DX37cXruBmbRS
+          {% elif is_state("input_select.spotify_playlist", "Chillstep") %} spotify:user:kent1337:playlist:6IjDl5eRczFdgZkKYXhuHZ
           {% elif is_state("input_select.spotify_playlist", "Mixed Hip Hop") %} spotify:user:1143893613:playlist:4yuXhTpPFSTnRSYmAN8mse
           {% elif is_state("input_select.spotify_playlist", "Mixed Electro") %} spotify:user:1143893613:playlist:1grR3x1MSPlyfS6VsaSzPn
           {% elif is_state("input_select.spotify_playlist", "Mixed Rock") %} spotify:user:1143893613:playlist:2ECMyR5ovezJBGQDnL3w23
           {% elif is_state("input_select.spotify_playlist", "Mixed Dub") %} spotify:user:1143893613:playlist:093q3iMD3lAA4h5oatDJPh
           {% elif is_state("input_select.spotify_playlist", "Good Feeling") %} spotify:user:1143893613:playlist:0rHdZMqeSR4XVvPf6QmFM4
-          {% elif is_state("input_select.spotify_playlist", "Queen") %} spotify:user:maandymendi:playlist:7ipYKFt8I3D6qO3QK23otG
-          {% elif is_state("input_select.spotify_playlist", "Pra Amar") %} spotify:user:mendesiasmin_:playlist:6c4CefxKB86sPOdubDKwPK
+          {% elif is_state("input_select.spotify_playlist", "Nightair") %} spotify:user:1143893613:playlist:2C4xXSYKJp0CYwIyWhODpD
+          {% elif is_state("input_select.spotify_playlist", "Streetbangers") %} spotify:user:1143893613:playlist:1JzR2qe9P3EOjgSyVNJ80R
           {% endif %}
+    - service: scene.turn_on
+      data_template:
+        entity_id: scene.romantic

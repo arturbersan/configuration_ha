@@ -66,15 +66,16 @@ media_player:
   - platform: spotify
     client_id: 6bf5216e80274947af5b9e75db91f6e5
     client_secret: 5d5e927b192240cca17a635e4b896984
-    aliases:
-      abc123def456: 'Living Room'
-      9183abas000: 'Bed Room'
 
 # Lifx lights 
 light:
   - platform: lifx
     server: 192.168.0.17
+    broadcast: 192.168.0.255
 
+scene:
+  - platform: lifx_cloud
+    token: c26fa8e0cced257946a1523b5169fb37ed811023383c403824bdcfa49f9ad1e1
 
 #############################################################################
 # Configurações para ser utilizadas nos scripts de seleção de playlist do
@@ -97,14 +98,13 @@ input_select:
       - Made In Germany
       - Murmel
       - Chillige Bässe
-      - Chillstep
       - Mixed Hip Hop
       - Mixed Electro
       - Mixed Rock
       - Mixed Dub
       - Good Feeling
       - Nightair
-      - Streetbangers
+      - Pra Amar
     icon: mdi:spotify
   spotify_source:
     name: 'Source:'

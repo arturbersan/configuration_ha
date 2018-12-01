@@ -10,3 +10,11 @@ light.mesa_de_trabalho_:
   name:
   platform: lifx
   unique_id: d0:73:d5:36:86:94
+light.cama:
+  name:
+  platform: lifx
+  unique_id: d0:73:d5:29:9f:25
+light.mesa_de_trabalho__2:
+  name:
+  platform: lifx
+  unique_id: d0:73:d5:28:56:9d
