@@ -95,6 +95,8 @@ input_select:
   spotify_playlist:
     name: 'Playlist:'
     options:
+      - Pra Amar
+      - Queen
       - Made In Germany
       - Murmel
       - Chillige Bässe
@@ -103,16 +105,25 @@ input_select:
       - Mixed Rock
       - Mixed Dub
       - Good Feeling
-      - Queen
-      - Pra Amar
     icon: mdi:spotify
   spotify_source:
-    name: 'Source:'
+    name: 'Dispositivo:'
     options:
       - GoogleCast
       - iPhone de Artur
     initial: GoogleCast
     icon: mdi:speaker-wireless
+  scenes_ligth:
+    name: 'Cenário de iluminação:'
+    options:
+      - Escolher roupa
+      - Festa
+      - Romantico
+      - Relaxante
+      - Filme
+      - Trabalhar de dia
+    initial: Trabalhar de dia
+    icon: mdi:lightbulb-on
 
 input_boolean:
   spotify_shuffle:

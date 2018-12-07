@@ -4,4 +4,5 @@ complete_scenes:
   entities:
     - input_select.spotify_playlist
     - input_select.spotify_source
+    - input_select.scenes_ligth
     - script.complete_scenes
