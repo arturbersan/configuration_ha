@@ -3,7 +3,7 @@ complete_scenes:
   sequence:
     - service: scene.turn_on
       data_template: !include ../data_template_script/scenes.yaml
-#    - service: media_player.select_source
-#      data_template: !include ../data_template_script/spotify_source.yaml
+    - service: media_player.select_source
+      data_template: !include ../data_template_script/spotify_source.yaml
     - service: media_player.play_media
       data_template: !include ../data_template_script/spotify_playlist.yaml
