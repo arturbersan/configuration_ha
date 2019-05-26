@@ -95,16 +95,11 @@ input_select:
   spotify_playlist:
     name: 'Playlist:'
     options:
-      - Pra Amar
-      - Queen
-      - Made In Germany
-      - Murmel
-      - Chillige Bässe
-      - Mixed Hip Hop
-      - Mixed Electro
-      - Mixed Rock
-      - Mixed Dub
-      - Good Feeling
+      - Escolher roupa
+      - Festa
+      - Romantico
+      - Relaxante
+      - Trabalhar de dia
     icon: mdi:spotify
   spotify_source:
     name: 'Dispositivo:'
@@ -120,7 +115,6 @@ input_select:
       - Festa
       - Romantico
       - Relaxante
-      - Filme
       - Trabalhar de dia
     initial: Trabalhar de dia
     icon: mdi:lightbulb-on
