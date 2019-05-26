@@ -1,0 +1,9 @@
+entity_id: media_player.spotify
+media_content_type: playlist
+media_content_id: >
+  {% if is_state("input_select.complete_scenes", "Escolher roupa") %} spotify:playlist:1KNClsO09ktIImSIXLlSTR
+  {% elif is_state("input_select.complete_scenes", "Trabalhar de dia") %} spotify:playlist:37i9dQZF1DX9FSYmdU9mbT
+  {% elif is_state("input_select.complete_scenes", "Relaxante") %} spotify:album:6uP9caYdtuhk0WZ4bMtUc0
+  {% elif is_state("input_select.complete_scenes", "Festa") %} spotify:playlist:23zy2U5H1khLwlqFAkUyXr
+  {% elif is_state("input_select.complete_scenes", "Romantico") %} spotify:user:mendesiasmin_:playlist:6c4CefxKB86sPOdubDKwPK
+  {% endif %}

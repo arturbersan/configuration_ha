@@ -106,6 +106,7 @@ input_select:
     options:
       - GoogleCast
       - iPhone de Artur
+      - Web Player (Firefox)
     initial: GoogleCast
     icon: mdi:speaker-wireless
   scenes_ligth:
@@ -118,6 +119,16 @@ input_select:
       - Trabalhar de dia
     initial: Trabalhar de dia
     icon: mdi:lightbulb-on
+  complete_scenes:
+    name: 'Cenário completo:'
+    options:
+      - Escolher roupa
+      - Festa
+      - Romantico
+      - Relaxante
+      - Trabalhar de dia
+    initial: Romantico
+    icon: mdi:monitor-multiple
 
 input_boolean:
   spotify_shuffle:

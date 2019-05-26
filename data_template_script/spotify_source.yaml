@@ -4,4 +4,5 @@ entity_id: media_player.spotify
 source: >
   {% if is_state("input_select.spotify_source", "GoogleCast") %} GoogleCast
   {% elif is_state("input_select.spotify_source", "iPhone de Artur") %} iPhone de Artur
+  {% elif is_state("input_select.spotify_source", "Web Player (Firefox)") %} iPhone de Artur
   {% endif %}

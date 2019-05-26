@@ -2,7 +2,5 @@ complete_scenes:
   name: Cenários Completos
 #  control: hidden
   entities:
-    - input_select.spotify_playlist
-    - input_select.spotify_source
-    - input_select.scenes_ligth
+    - input_select.complete_scenes
     - script.complete_scenes

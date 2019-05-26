@@ -1,0 +1,7 @@
+entity_id: >
+  {% if is_state("input_select.complete_scenes", "Escolher roupa") %} scene.escolher_roupa
+  {% elif is_state("input_select.complete_scenes", "Festa") %} scene.festa
+  {% elif is_state("input_select.complete_scenes", "Romantico") %} scene.romantico
+  {% elif is_state("input_select.complete_scenes", "Relaxante") %} scene.relaxante
+  {% elif is_state("input_select.complete_scenes", "Trabalhar de dia") %} scene.trabalhar_de_dia
+  {% endif %}

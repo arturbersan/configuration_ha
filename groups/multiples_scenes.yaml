@@ -1,0 +1,8 @@
+multiples_scenes:
+  name: Multiplos Cenários
+#  control: hidden
+  entities:
+    - input_select.spotify_playlist
+    - input_select.spotify_source
+    - input_select.scenes_ligth
+    - script.multiples_scenes
