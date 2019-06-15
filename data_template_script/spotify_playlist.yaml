@@ -2,7 +2,7 @@ entity_id: media_player.spotify
 media_content_type: playlist
 media_content_id: >
   {% if is_state("input_select.spotify_playlist", "Escolher roupa") %} spotify:playlist:1KNClsO09ktIImSIXLlSTR
-  {% elif is_state("input_select.spotify_playlist", "Trabalhar de dia") %} spotify:playlist:37i9dQZF1DX9FSYmdU9mbT
+  {% elif is_state("input_select.spotify_playlist", "Trabalhar de dia") %} spotify:playlist:37i9dQZF1DWZ2DWnNKZTXs
   {% elif is_state("input_select.spotify_playlist", "Relaxante") %} spotify:album:6uP9caYdtuhk0WZ4bMtUc0
   {% elif is_state("input_select.spotify_playlist", "Festa") %} spotify:playlist:23zy2U5H1khLwlqFAkUyXr
   {% elif is_state("input_select.spotify_playlist", "Romantico") %} spotify:user:mendesiasmin_:playlist:6c4CefxKB86sPOdubDKwPK
